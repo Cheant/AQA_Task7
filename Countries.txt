@@ -1,0 +1,28 @@
+Austria,False
+Belgium,False
+Bulgaria,False
+Croatia,False
+Cyprus,False
+Czech Republic,False
+Denmark,False
+Estonia,False
+Finland,False
+France,False
+Germany,False
+Greece,False
+Hungary,False
+Ireland,False
+Italy,False
+Latvia,False
+Lithuania,False
+Luxembourg,False
+Malta,False
+Netherlands,False
+Poland,False
+Protugal,False
+Romania,False
+Slovakia,False
+Slovenia,False
+Spain,False
+Sweden,False
+United Kingdom,False
