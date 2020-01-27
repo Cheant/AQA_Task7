@@ -33,29 +33,24 @@ namespace Task7Library
             streamReader.Close();
         }
 
-        public void AddCountry()
+        public void AddCountry(Country countryToAdd)
         {
-            string countryName = "Ukraine";
-            bool isTelenorSupported = false;
             StreamWriter streamWriter = new StreamWriter(path, true);
 
-            listCountries.Add(listCountries.Count() + 1, new Country() { Name = countryName, IsTelenorSupported = isTelenorSupported });
-            streamWriter.WriteLine(Environment.NewLine + countryName + "," + isTelenorSupported);
+            listCountries.Add(listCountries.Count() + 1, countryToAdd);
+            streamWriter.WriteLine(Environment.NewLine + countryToAdd.Name + "," + countryToAdd.IsTelenorSupported);
             streamWriter.Close();
         }
 
-        public void ChangeCountry()
+        public void ChangeCountry(Country countryToEdit)
         {
-            string firstCountryName = "Denmark";
-            string secondCountryName = "Hungary";
-            bool isTelenorSupported = true;
             StreamWriter streamWriter = new StreamWriter(path);
 
             foreach (Country country in listCountries.Values)
             {
-                if (country.Name == firstCountryName || country.Name == secondCountryName)
+                if (country.Name == countryToEdit.Name)
                 {
-                    country.IsTelenorSupported = isTelenorSupported;
+                    country.IsTelenorSupported = countryToEdit.IsTelenorSupported;
                 }
                 streamWriter.WriteLine(country.Name + "," + country.IsTelenorSupported);
             }

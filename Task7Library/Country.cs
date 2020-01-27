@@ -9,14 +9,9 @@ namespace Task7Library
 
         public override string ToString()
         {
-            if (!IsTelenorSupported)
-            {
-                return Name.ToString() + " - " + IsTelenorSupported.ToString() + Environment.NewLine;
-            }
-            else
-            {
-                return "";
-            }
+            return IsTelenorSupported
+                ? ""
+                : Name.ToString() + " - " + IsTelenorSupported.ToString() + Environment.NewLine;
         }
     }
 }
